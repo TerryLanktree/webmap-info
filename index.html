@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+        <title>Province of British Columbia Web Mapping Technologies</title>
+
+        <style type="text/css">
+            body {
+                display: grid;
+                width: auto;
+                height: auto;
+                align-items: center;
+                justify-items: center;
+                grid-template-rows: 2fr minmax(80%, auto) 2fr;
+            }
+
+            @media only screen and (min-width: 1025px) {
+                body {
+                    grid-template-columns: 1fr 3fr 1fr;
+                }
+
+                header, .panel-group, footer {
+                    grid-column: 2;
+                }
+            }
+
+            .panel-group {
+                width: 100%
+            }
+
+            .panel-heading.adr-accepted {
+                background-color: lightgreen;
+            }
+
+            .panel-heading.adr-superceded {
+                background-color: lightgrey;
+            }
+
+            .panel-heading.adr-amended {
+                background-color: yellow;
+            }
+
+            .panel-heading.adr-unknown {
+                background-color: white;
+            }
+
+            .panel-heading.adr-pending {
+                background-color: lightblue;
+            }
+
+            .adr-superceded > .panel-title > a {
+                text-decoration: line-through;
+            }
+
+            .adr-icon {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Province of British Columbia Web Mapping Technologies</h1>
+        </header>
+        <div class="panel-group">
+            
+            <div class="panel panel-default">
+                <div class="panel-heading adr-unknown">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse0">CWM - Common Web Mapping Framework</a>
+
+                        
+                        <i class="adr-icon fas fa-fw fa-question"></i>
+                        
+
+                    </h4>
+                </div>
+                <div id="collapse0" class="panel-collapse collapse">
+                    <div class="panel-body"><h1>CWM - Common Web Mapping Framework</h1>
+<p>Last updated 2020-03-25</p>
+<h2>Status</h2>
+<ul>
+<li>Status: Platform Maturity</li>
+<li>Contact / Initiation Process  Client Engagement - Bill.Devey@gov.bc.ca Common Services Manager IITD</li>
+<li>Technology platform - javascript, openlayers, OGC WMS/WFS, ISSS Platform (Liferay/Tomcat)</li>
+<li>Skillsets required - familiarity with javascript / relationship with IIT</li>
+<li>Links to software providers/code repositories - Vivid Solutions Inc.</li>
+<li>Ie. Example web map application  <ul>
+<li>Natural Resource Online Services <a href="https://portal.nrs.gov.bc.ca/web/client/explore">https://portal.nrs.gov.bc.ca/web/client/explore</a></li>
+<li>Mineral Tenures Online <a href="https://www.mtonline.gov.bc.ca/mtov/map/mto/cwm.jsp?site=mem_mto_min-view-title">https://www.mtonline.gov.bc.ca/mtov/map/mto/cwm.jsp?site=mem_mto_min-view-title</a></li>
+<li>Integrated Land &amp; Resource Registry (ILRR) <a href="https://a100.gov.bc.ca/ext/ilrr/jsp/mapviewer/ilrr-mapviewer.jsp">https://a100.gov.bc.ca/ext/ilrr/jsp/mapviewer/ilrr-mapviewer.jsp</a></li>
+</ul>
+</li>
+</ul>
+<h2>Context</h2>
+<p>This NRM service is part of Common Services tools which provides an Open Source framework for building a map within an application.  The CWM Client can be added to host application web pages to display and interact with maps and spatial data. The NRM Common Web Mapping (CWM) framework provides a simple, powerful and lightweight mapping capability for web-browser based client applications. CWM is integrated with the NRS ISSS service-based architecture.  The client component provides a simple API to let host pages interact with the map to display and manipulate spatial data.</p>
+<h2>Context and Problem Statement</h2>
+<p>Business Areas who may have javascript/software developers who are able to build and support the web mapping solution OR engage with IIT for hosting/deployment resources.</p>
+<h2>Decision Drivers</h2>
+<ul>
+<li>skillset of team (javascript developers/ relationship to IIT)</li>
+<li>opensource drivers</li>
+</ul>
+<h2>Considered Options</h2>
+<ul>
+<li>refer to root of this repo - </li>
+</ul>
+<h3>Positive Consequences</h3>
+<ul>
+<li>part of NRM ISSS environment</li>
+</ul>
+<h3>Negative Consequences</h3>
+<ul>
+<li>skill set required for development and maintenance available internal to government (software developer skillsets) that may not be available to business project.</li>
+</ul>
+<h1>Additional Information</h1>
+<h2>Hosting / Development Requirements</h2>
+<ul>
+<li>Full development of coding/scripting web mapping applications- yes</li>
+<li>A web mapping application that can be configured and deployed with internal resources- yes</li>
+<li>A web mapping application that can be configured and deployed with Consulting/contractor services- yes</li>
+<li>Simple customizations without the effort of a full development    No - Depends how you define simple. Lots of customization can be done by changes to a JSON configuration file, without writing any code.</li>
+<li>Complex custom tools, workflows and applications to provide powerful and feature-rich end-user experiences- yes  Workflows are the responsibility of the developer. </li>
+<li>Customization of web mapping applications that can be embedded in other applications or web pages- yes</li>
+<li>Is hosted with deployment via a web server (IIT managed deployment)- yes</li>
+<li>Has zero or minimal licensing fees- yes</li>
+<li>Supports the ability to secure the application or data within the application based on IDIR/BCeID user layer level security- yes both site and layer level</li>
+<li>Provides high performance, fast and efficient response times- yes</li>
+<li>Can handle a lot of users and high data volume- yes  Yes - The CWM library is running completely in the user’s browser, so it scales to any number of users. The map data it is showing is being generated on other machines, and those resources are being shared by all users. </li>
+<li>Time to Market    Varies - Standard SDLC</li>
+</ul>
+<h2>End User Requirements</h2>
+<ul>
+<li>Easily FIND the web mapping application and data within the map- yes</li>
+<li>Easily FIND metadata/information about the data in the web mapping application- yes</li>
+<li>Easily USE the web mapping application without training (Training to use, and/or build)- yes</li>
+<li>SHARE the mapping application session and its data internally within government- yes</li>
+<li>SHARE the mapping application session and its data externally with non-government - yes</li>
+<li>Consume and integrate local data into the web mapping application- yes  Seven popular geometry types for import </li>
+<li>Consume and integrate Provincial data into the web mapping application- yes</li>
+<li>Consume and integrate External data into the web mapping application (WMS, ArcGIS REST)- yes</li>
+<li>Transfer data collected within the web mapping application to operational systems - not part of CWM client.  Application which hosts CWM needs to be able to handle this.</li>
+<li>Collect data  - CWM client provides the tools, but the application needs to implement workflows</li>
+<li>Edit data - CWM client provides the tools, but the application needs to implement workflows</li>
+<li>Filter or query data- yes</li>
+<li>Download the data being viewed- yes</li>
+<li>Prepare specific datasets for off-line use- yes</li>
+<li>Add mark-ups to the map in the web mapping application- yes</li>
+<li>Customize printing by modifying the legend- yes</li>
+<li>Save work and return to it at a later date- yes</li>
+<li>Access visualization tools in the web mapping application </li>
+<li>Identify &amp; discover relationships among features (e.g. proximity, intersection)- CWM client can make use of SOS to find features that overlap a polygon.</li>
+<li>Types of training available   - Floating Help, contextual help, </li>
+<li>Mobile Friendly   - No</li>
+</ul>
+</div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading adr-unknown">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">SMK - Simple Map Kit</a>
+
+                        
+                        <i class="adr-icon fas fa-fw fa-question"></i>
+                        
+
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body"><h1>SMK - Simple Map Kit</h1>
+<p>Last updated 2020-03-25</p>
+<h2>Status</h2>
+<ul>
+<li>Status: emerging</li>
+<li>Contact / Initiation Process  Client Engagement -  datamaps@gov.bc.ca</li>
+<li>Technology platform - javascript, leaflet, arcgis javascript api, OGC WMS/WFS, ArcGIS Rest</li>
+<li>Skillsets required - familiarity with javascript development/github</li>
+<li>Apache 2.0 license</li>
+<li>Links to software providers/code repositories - <a href="https://github.com/bcgov/smk-client">https://github.com/bcgov/smk-client</a></li>
+<li>Ie. Example web map applications:  <ul>
+<li>Truck Route Planner - <a href="https://bcgov.github.io/smk-tlink/">https://bcgov.github.io/smk-tlink/</a></li>
+<li>Assisted Living and Residential Care Locations - <a href="http://moh-qa.apps.gov.bc.ca/alrc/?">http://moh-qa.apps.gov.bc.ca/alrc/?</a></li>
+</ul>
+</li>
+</ul>
+<h2>Context</h2>
+<ul>
+<li>Leaflet or ArcGIS Javascript 2D/3D Api based light weight javascript toolkit. Targeted to non-GIS developers.</li>
+<li>Community involvement, source code on GitHub</li>
+<li>Optional support and hosting model from DataBC -Contact / Initiation Process - datamaps@gov.bc.ca</li>
+<li>Architecture - can be Containerized, or deploy standalone anywhere</li>
+</ul>
+<h2>Context and Problem Statement</h2>
+<p>Business Areas who may have javascript/software developers who are able to build and support the web mapping solution OR engage with DataBC for hosting resources.</p>
+<h2>Decision Drivers</h2>
+<ul>
+<li>skillset of team (javascript developers)</li>
+<li>opensource drivers</li>
+</ul>
+<h2>Considered Options</h2>
+<ul>
+<li>refer to root of this repo - </li>
+</ul>
+<h3>Positive Consequences</h3>
+<ul>
+<li>can be used by software developers and incorporated into there code base.</li>
+<li>provides examples of using BC Government web services such as the BC Geocoder, BC Router and other web serices.</li>
+</ul>
+<h3>Negative Consequences</h3>
+<ul>
+<li>skill set required for development and maintenance available internal to government (software developer skillsets) that may not be available to business project.</li>
+</ul>
+<h1>Additional Information</h1>
+<h2>Hosting / Development Requirements</h2>
+<ul>
+<li>Self-serve/wizard option to build web mapping applications quickly with no coding/scripting experience - has an admin app open source here - <a href="https://github.com/bcgov/smk">https://github.com/bcgov/smk</a></li>
+<li>Self-serve/wizard option to build web mapping applications quickly with coding/scripting experience   - located here <a href="https://github.com/bcgov/smk/">https://github.com/bcgov/smk/</a> instructions here - <a href="https://github.com/bcgov/smk-client/blob/master/DEVELOPMENT.md">https://github.com/bcgov/smk-client/blob/master/DEVELOPMENT.md</a></li>
+<li>Full development of coding/scripting web mapping applications</li>
+<li>A web mapping application that can be configured and deployed with internal resources (with javascript skills)</li>
+<li>A web mapping application that can be configured and deployed with Consulting/contractor services </li>
+<li>Simple customizations without the effort of a full development see - <a href="https://github.com/bcgov/smk-client/blob/master/DEVELOPMENT.md">https://github.com/bcgov/smk-client/blob/master/DEVELOPMENT.md</a></li>
+<li>Customization of web mapping applications that can be embedded in other applications or web pages</li>
+<li>Can be hosted anywhere</li>
+<li>no editing libaries capabilities available</li>
+<li>Is hosted with deployment via a web server/Openshift (DataBC managed deployment)</li>
+<li>Supports the ability to secure the application or data within the application based on IDIR/BCeID user layer level security (requires external security provider, if it uses siteminder it could access secure BCGW layers)</li>
+<li>Provides high performance, fast and efficient response times (depends on where it is hosted and the data be displayed)</li>
+<li>Can handle a lot of users and high data volume (depends on where it is hosted and the data be displayed)</li>
+<li>Time to Market    Fast - build and deploy anywhere</li>
+</ul>
+<h2>End User Requirements</h2>
+<ul>
+<li>ACCESS the web mapping application via their mobile device</li>
+<li>Easily USE the web mapping application without training (Training to use, and/or build)   </li>
+<li>Consume and integrate local data into the web mapping application - SHAPE, GeoJSON, CSV, KML</li>
+<li>Consume and integrate Provincial data into the web mapping application</li>
+<li>Consume and integrate External data into the web mapping application (WMS, ArcGIS REST)</li>
+<li>Filter or query data</li>
+<li>Add mark-ups to the map in the web mapping application</li>
+<li>Access visualization tools in the web mapping application 3D</li>
+<li>Identify &amp; discover relationships among features (e.g. proximity, intersection)</li>
+<li>Types of training available   documentation - github documents</li>
+<li>Mobile Friendly   Yes</li>
+</ul>
+</div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading adr-unknown">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">IMF2 Internet Mapping Framework 2</a>
+
+                        
+                        <i class="adr-icon fas fa-fw fa-question"></i>
+                        
+
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body"><h1>IMF2 Internet Mapping Framework 2</h1>
+<p>Last updated 2020-03-25</p>
+<h2>Status</h2>
+<ul>
+<li>Status: Platform Maturity - Minor UI Updates</li>
+<li>Contact / Initiation Process  Client Engagement - Terry.Lanktree@gov.bc.ca; datamaps@gov.bc.ca</li>
+<li>Technology platform - .NET, IIS, HTML5 Viewer, ArcGIS rest services</li>
+<li>Skillsets required - .NET development for customization, deployment via jenkins of configuration files to DataBC's environment</li>
+<li>Licensed through GeoCortex</li>
+<li>Links to software providers/code repositories - <a href="https://www.geocortex.com/products/geocortex-essentials/">https://www.geocortex.com/products/geocortex-essentials/</a></li>
+<li>Example implementation - <a href="https://maps.gov.bc.ca/ess/hm/imap4m/">https://maps.gov.bc.ca/ess/hm/imap4m/</a></li>
+</ul>
+<h2>Context</h2>
+<p>A web mapping platform that's versatile through configuration and custom tool development.<br>
+Ideal for fit for purpose applications, both desktop and mobile.  Can be light weight or heavy weight depending on clients needs.
+A web mapping platform which is the built upon the ESRI GeoCortex platform. 
+This is a DataBC hosted licensed product which provides maps and reports from the BC Geographic Warehouse (secure and public). 
+Ideal for either mobile or desktop as is or with additional development.</p>
+<h2>Context and Problem Statement</h2>
+<p>Allows access to secure objects within the BC Geographic Warehouse via WEBADE and Siteminder.</p>
+<h2>Decision Drivers</h2>
+<ul>
+<li>based on business need for secure access to BCGW, and hosting support</li>
+<li>capabilitied and skill sets of the development/application team</li>
+<li>relationship with DataBC</li>
+</ul>
+<h2>Considered Options</h2>
+<ul>
+<li>refer to root of this repo - </li>
+</ul>
+<h3>Positive Consequences</h3>
+<ul>
+<li>hosted by DataBC, access to secure BC Geographic Warehouse data</li>
+</ul>
+<h3>Negative Consequences</h3>
+<ul>
+<li>costs</li>
+<li>not open source</li>
+<li>use of legacy security model</li>
+<li>full control of hosted environment in production is by DataBC</li>
+</ul>
+<h1>Additional Information</h1>
+<h2>Hosting / Development Requirements</h2>
+<ul>
+<li>Full development of coding/scripting web mapping applications </li>
+<li>A web mapping application that can be configured and deployed with internal resources </li>
+<li>A web mapping application that can be configured and deployed with Consulting/contractor services </li>
+<li>Simple customizations without the effort of a full development </li>
+<li>Complex custom tools, workflows and applications to provide powerful and feature-rich end-user experiences </li>
+<li>Customization of web mapping applications that can be embedded in other applications or web pages </li>
+<li>Is hosted in Canada   - yes</li>
+<li>Is hosted (DataBC managed deployment, developer deployments with delivery environments)   </li>
+<li>minimal licensing fees    Geocortex ELA</li>
+<li>Supports the ability to secure the application or data within the application based on IDIR/BCeID user layer level security   </li>
+<li>Time to Market    Varies - Standard SDLC</li>
+<li>Build Cost/Development    </li>
+<li>License/Platform Cost </li>
+<li>Data Modelling Costs  </li>
+<li>Hosting Costs Annual hosting costs vary based on app complexity or MOU</li>
+</ul>
+<h2>End User Requirements</h2>
+<ul>
+<li>Can Easily FIND the web mapping application and data within the map   </li>
+<li>Can Easily FIND metadata/information about the data in the web mapping application (references the BC Data *Catalogue)</li>
+<li>Can ACCESS the web mapping application via their mobile device</li>
+<li>Can Easily USE the web mapping application without training (Training to use, and/or build)   </li>
+<li>Can SHARE the mapping application session and its data internally within government   </li>
+<li>Can SHARE the mapping application session and its data externally with non-government  (requires BCEID/IDIR *via siteminder for secure data)</li>
+<li>Can Consume and integrate local data into the web mapping application Shape and CSV</li>
+<li>Can Consume and integrate Provincial data into the web mapping application    (data within BCGW)</li>
+<li>Can Consume and integrate External data into the web mapping application (WMS - view only, ArcGIS REST, requires appropriate CORS)</li>
+<li>Can Transfer data collected within the web mapping application to operational systems  (via BCGW Distribution service)</li>
+<li>Can Collect data - Custom only</li>
+<li>Can Edit data (requires a custom ArcGIS editable feature service)</li>
+<li>Can Filter or query data</li>
+<li>Can Download the data being viewed    (via BCGW Distribution service)</li>
+<li>Can Add mark-ups to the map in the web mapping application    </li>
+<li>Can Re-symbolize, modify or customize map data or labels  </li>
+<li>Can Save work and return to it at a later date as client side saved sessions</li>
+<li>Can Identify &amp; discover relationships among features (e.g. proximity, intersection)   </li>
+<li>Types of training available   - manual, webinar, video</li>
+<li>Mobile Friendly   - Yes</li>
+</ul>
+</div>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading adr-unknown">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse3">BC Map Hub (ArcGIS Online Subscription)</a>
+
+                        
+                        <i class="adr-icon fas fa-fw fa-question"></i>
+                        
+
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body"><h1>BC Map Hub (ArcGIS Online Subscription)</h1>
+<p>Last updated 2020-03-25</p>
+<h2>Status</h2>
+<ul>
+<li>Status: SaaS - Licensed cloud based service running on elastic Amazon cloud</li>
+<li>Contact / Initiation Process  Client Engagement - meg.hoole@gov.bc.ca; datamaps@gov.bc.ca</li>
+<li>Technology platform - Cloud based, HTML5 Viewers, ArcGIS rest services</li>
+<li>Skillsets required - familiarity with ESRI ecosystem of applications</li>
+<li>ELA/Subscription based cloud services</li>
+<li>Links to software providers/code repositories - <a href="http://arcgis.com/index.html">http://arcgis.com/index.html</a></li>
+<li>Example implementation <ul>
+<li>BC Map Hub (BC's ArcGIS Online subscription) -<a href="https://governmentofbc.maps.arcgis.com/home/index.html">https://governmentofbc.maps.arcgis.com/home/index.html</a> </li>
+<li>EmergencyMapBC - <a href="https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=950b4eec577a4dc5b298a61adab41c06">https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=950b4eec577a4dc5b298a61adab41c06</a></li>
+</ul>
+</li>
+</ul>
+<h2>Context</h2>
+<p>ESRI's extension of ArcGIS into the cloud, ArcGIS Online provides a space to develop applications and share apps and contents for purposes of collaboration. The official BC Government location for ESRI's ArcGIS Online (AGOL) tool. It is a cloud-based tool which allows a user to develop applications and share geospatial information. Useful to link GIS Analyst work with Business users to share maps and reports. Primary Strengths -    "Simple applications that can be built and shared with groups, a ministry, government or public". Hundreds of default templates to choose from including story books. ArcGIS Online collector for quick, simple field data collection.
+Elastic server architecture for high, short term use applications</p>
+<h2>Context and Problem Statement</h2>
+<p>Business Areas who may have internal GIS Staff who are able to build and support the web mapping solution and they may not have access to software developers.</p>
+<h2>Decision Drivers</h2>
+<ul>
+<li>skillset of team (may be historial GIS analysts familiar with ArcGIS Products vs IT Developers)</li>
+</ul>
+<h2>Considered Options</h2>
+<ul>
+<li>refer to root of this repo - </li>
+</ul>
+<h3>Positive Consequences</h3>
+<p>*cloud based service offering that is scalable, and accessible to GIS analysts who may not be developeres</p>
+<h3>Negative Consequences</h3>
+<ul>
+<li>costs</li>
+<li>not open source</li>
+<li>hosted outside of Canada</li>
+</ul>
+<h1>Additional Information</h1>
+<h2>Hosting / Development Requirements</h2>
+<ul>
+<li>Can Self-serve/wizard option to build web mapping applications quickly with no coding/scripting experience</li>
+<li>Can Self-serve/wizard option to build web mapping applications quickly with coding/scripting experience</li>
+<li>Can build coding/scripting web mapping applications - see web app builder esri.com/en-us/arcgis/products/web-appbuilder/overview</li>
+<li>A web mapping application that can be configured and deployed with internal resources - yes</li>
+<li>A web mapping application that can be configured and deployed with Consulting/contractor services - yes</li>
+<li>Simple customizations without the effort of a full development - yes</li>
+<li>Complex custom tools, workflows and applications to provide powerful and feature-rich end-user experiences</li>
+<li>Customization of web mapping applications that can be embedded in other applications or web pages</li>
+<li>Supports the ability to secure the application or data within the application based on IDIR/BCeID user layer level security with internal seat license requirements</li>
+<li>Provides high performance, fast and efficient response times</li>
+<li>Can handle a lot of users and high data volume</li>
+<li>Time to Market - Fast - Self publication potential</li>
+<li>Build Cost/Development - requirements user based subscriptions, no coding required for simple maps, configuration via GUI</li>
+<li>Hosting Costs - data hosting costs may apply</li>
+</ul>
+<h2>End User Requirements</h2>
+<ul>
+<li>Can Easily FIND the web mapping application and data within the map</li>
+<li>Can Easily FIND metadata/information about the data in the web mapping application </li>
+<li>Can ACCESS the web mapping application via their mobile device</li>
+<li>Can SHARE the mapping application session and its data internally within government</li>
+<li>Can SHARE the mapping application session and its data externally with non-government </li>
+<li>Can Consume and integrate local data into the web mapping application </li>
+<li>Can Consume and integrate Provincial data into the web mapping application - can be WMS/WFS - limited, better with ArcGIS Rest services.</li>
+<li>Can Consume and integrate External data into the web mapping application (WMS, REST) </li>
+<li>Can Transfer data collected within the web mapping application to operational systems </li>
+<li>Can Collect data  Yes - through Collector for AGO and Survey123 for AGO mobile apps</li>
+<li>Can Edit data </li>
+<li>Can Filter or query data </li>
+<li>Can Download the data being viewed    Yes - but there may be some limitations</li>
+<li>Can Prepare specific datasets for off-line use </li>
+<li>Can Add mark-ups to the map in the web mapping application </li>
+<li>Can Re-symbolize, modify or customize map data or labels </li>
+<li>Can Customize printing by modifying the legend    </li>
+<li>Can Access visualization tools in the web mapping application </li>
+<li>Can Identify &amp; discover relationships among features (e.g. proximity, intersection) </li>
+<li>Can Detect statistically significant patterns (e.g. hotspots, outliers) </li>
+<li>Can Use analytical models to make predictions based on data   (AGO does have some capabilities - but we encourage folks to use ArcMap or Pro instead.  Complexity of desired analytical model may be a factor and incur hosting costs)</li>
+<li>Types of training available - in person, webinars, documentation, ESRI Support
+Mobile Friendly - Yes</li>
+</ul>
+</div>
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            Generated with <3 using ADR Viewer
+        </footer>
+    </body>
+</html>
