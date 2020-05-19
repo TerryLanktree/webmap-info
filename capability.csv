@@ -3,3 +3,11 @@ mobile support, yes, yes, yes, no
 offline support, no, no, yes, no
 editing support, yes, no, yes, yes
 save session support, yes, no, no, yes
+overlap reporting, , , , 
+geofence reporting, , , , 
+print/export map, , , , 
+search for location, , , , 
+bookmark location, , , , 
+save session, , , , 
+toggle layers, , , , 
+complex deployment, yes, yes, no, yes
