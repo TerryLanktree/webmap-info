@@ -1,7 +1,7 @@
 # Web Mapping Solutions currently available within the BC Government
 
 ## Problem Statement
-People internal to government are not familiar with web mapping tools/services that are available/suitable to them -  IIT, GeoBC, and DataBC want to provide a consistent message about these tools and services.
+"Government Internal Staff require access to information on solutions for web mapping tools/services that are currently available and supported within government. IIT, GeoBC, and DataBC want to provide a consistent message on these options."
 
 ## Summary of existing code or frameworks for Web Mapping currently in use within the Government of British Columbia
 
