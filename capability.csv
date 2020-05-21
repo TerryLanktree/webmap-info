@@ -1,26 +1,28 @@
-Capability,IMF2,SMK,AGO,CWM
-mobile support, yes, yes, yes, no
-offline support, no, no, yes, no
-editing support, yes, no, yes, yes
-save session support, yes, no, no, yes
-overlap reporting, , , , 
-geofence reporting, , , , 
-print/export map, , , , 
-search for location/geocoding, , , , 
-bookmark location, , , , 
-save session, , , , 
-toggle layers, , , , 
-complex deployment, yes, yes, no, yes
-interagency deployment dependencies, yes, yes, no, yes
-program cost, yes, yes, no, yes
-program maintenace cost, yes, yes, yes, yes
-small project feasable, no, no, yes, no
-included data storage and service, no, no, yes, no
-hosting provided, , , yes, 
-existing pia/stra, , , , 
-configurable map projections, , , ,
+Capability,IMF2,SMK,AGO,CWM, Capability Class
+mobile support, yes, yes, yes, no, map
+offline support, no, no, yes, no, map
+editing support, yes, no, yes, yes, data
+save session support, yes, no, no, yes, map
+overlap reporting, , , , , reporting
+geofence reporting, , , , , reporting
+print/export map, , , , , map
+search for location/geocoding, , , , , map
+bookmark location, , , , , map
+save session, , , , , map
+toggle layers, , , , , map
+complex deployment, yes, yes, no, yes , framework
+interagency deployment dependencies, yes, yes, no, yes, framework
+program cost, yes, yes, no, yes, project
+program maintenace cost, yes, yes, yes, yes, project
+small project feasable, no, no, yes, no, project
+included data storage and service, no, no, yes, no, framework
+hosting provided, , , yes, framework
+existing pia/stra, , , , project
+configurable map projections, , , , map
 load user data support, , , , 
 export data support, , , ,
+recent imagery base map, , , , 
+bc government curated basemap, , , , 
 data service connection support, yes, yes, yes, 
 geonetwork rout support, , , ,
 simple map navigation, , , , 
@@ -29,5 +31,6 @@ publish to external users, yes, yes, no, yes
 security control groups, , , ,
 identify map features, yes, yes, yes, yes
 create data summaries, yes, , yes, no
+publicly documented, , , , 
 relative developement cost, $, $, $, $
 relative maintenance cost, $, $, $, $
