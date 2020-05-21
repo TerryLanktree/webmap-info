@@ -23,7 +23,7 @@ load user data support, , , , , data
 export data support, , , , , data
 recent imagery base map, , , , , data
 bc government curated basemap, , , , , data
-data service connection support, yes, yes, yes, data
+data service connection support, yes, yes, yes, , data
 geonetwork routing support, , , , , map
 simple map navigation, , , , , map
 mulitple-browser support, , yes, yes, yes, framework
