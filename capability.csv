@@ -17,20 +17,20 @@ program maintenace cost, yes, yes, yes, yes, project
 small project feasable, no, no, yes, no, project
 included data storage and service, no, no, yes, no, framework
 hosting provided, , , yes, , framework
-existing pia/stra, , , , ,project
-configurable map projections, , , , ,map
-load user data support, , , , 
-export data support, , , ,
-recent imagery base map, , , , 
-bc government curated basemap, , , , 
-data service connection support, yes, yes, yes, 
-geonetwork rout support, , , ,
-simple map navigation, , , , 
-mulitple-browser support, , yes, yes, yes
-publish to external users, yes, yes, no, yes
-security control groups, , , ,
-identify map features, yes, yes, yes, yes
-create data summaries, yes, , yes, no
-publicly documented, , , , 
-relative developement cost, $, $, $, $
-relative maintenance cost, $, $, $, $
+existing pia/stra, , , , , project
+configurable map projections, , , , , map
+load user data support, , , , , data
+export data support, , , , , data
+recent imagery base map, , , , , data
+bc government curated basemap, , , , , data
+data service connection support, yes, yes, yes, data
+geonetwork routing support, , , , , map
+simple map navigation, , , , , map
+mulitple-browser support, , yes, yes, yes, framework
+publish to external users, yes, yes, no, yes, framework
+security control groups, , , , , framework
+identify map features, yes, yes, yes, yes, map
+create data summaries, yes, , yes, no, data
+publicly documented, , , , , framework
+relative developement cost, $, $, $, $, project
+relative maintenance cost, $, $, $, $, project
