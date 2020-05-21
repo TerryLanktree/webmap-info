@@ -17,8 +17,8 @@ program maintenace cost, yes, yes, yes, yes, project
 small project feasable, no, no, yes, no, project
 included data storage and service, no, no, yes, no, framework
 hosting provided, , , yes, , framework
-existing pia/stra, , , , project
-configurable map projections, , , , map
+existing pia/stra, , , , ,project
+configurable map projections, , , , ,map
 load user data support, , , , 
 export data support, , , ,
 recent imagery base map, , , , 
