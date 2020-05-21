@@ -30,7 +30,7 @@ mulitple-browser support, , yes, yes, yes, framework
 publish to external users, yes, yes, no, yes, framework
 security control groups, , , , , framework
 identify map features, yes, yes, yes, yes, map
-create data summaries, yes, , yes, no, data
+create data summaries, yes, , yes, no, reporting
 publicly documented, , , , , framework
 relative developement cost, $, $, $, $, project
 relative maintenance cost, $, $, $, $, project
