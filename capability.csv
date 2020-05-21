@@ -6,8 +6,28 @@ save session support, yes, no, no, yes
 overlap reporting, , , , 
 geofence reporting, , , , 
 print/export map, , , , 
-search for location, , , , 
+search for location/geocoding, , , , 
 bookmark location, , , , 
 save session, , , , 
 toggle layers, , , , 
 complex deployment, yes, yes, no, yes
+interagency deployment dependencies, yes, yes, no, yes
+program cost, yes, yes, no, yes
+program maintenace cost, yes, yes, yes, yes
+small project feasable, no, no, yes, no
+included data storage and service, no, no, yes, no
+hosting provided, , , yes, 
+existing pia/stra, , , , 
+configurable map projections, , , ,
+load user data support, , , , 
+export data support, , , ,
+data service connection support, yes, yes, yes, 
+geonetwork rout support, , , ,
+simple map navigation, , , , 
+mulitple-browser support, , yes, yes, yes
+publish to external users, yes, yes, no, yes
+security control groups, , , ,
+identify map features, yes, yes, yes, yes
+create data summaries, yes, , yes, no
+relative developement cost, $, $, $, $
+relative maintenance cost, $, $, $, $
